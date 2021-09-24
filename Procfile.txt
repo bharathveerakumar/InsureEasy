@@ -1,1 +1,1 @@
-web: npm run s
+rweb: node route.js
