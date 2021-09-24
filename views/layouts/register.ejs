@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register.css">
+    <title>Register</title>
+</head>
+<body>
+    <main>
+        <div class="maincont">
+            <img src="regpage.jpg" alt="photo">
+            <form action="register" method="POST" enctype="multipart/form-data">
+                <h1>Sign up to <span>InsureEasy</span>.</h1>
+                <h4>Already Have an Account? <a href="login">Log in</a></h4>
+                <h4>Or <a href="admin">Admin?</a></h4>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                <label for="phone">Mobile Number</label>
+                <input type="number" name="phone" id="phone" placeholder="Enter Your Number">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email address" required>
+                <label for="pasword">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Your Password">
+                <label for="cpassword">Confirm Password</label>
+                <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Your Password">
+                <button type="submit" class="sub">Submit</button>
+                <div class="message">
+                <% for(let i=0;!(i>=message.length);i++){ %>
+                    <div><%= message[i].msg %></div>
+                <% } %>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="js/register.js"></script>
+</body>
+</html>

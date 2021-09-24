@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin.css">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="title">
+            <h1>Insure</h1>
+            <h1 class="secondtitle">EASY</h1>
+            <i class="fa fa-ambulance" style="font-size: 40px; color: black;"></i>
+        </div>
+        <ul class="hide">
+            <li><a href="admin">Home</a></li>
+            <li><a href="policylist">Policy List</a></li>
+            <li><a href="current">Current Policy Holders</a></li>
+        </ul>
+        <div class="menicon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line" id="t"></div>
+        </div>
+        <ul class="h">
+            <li><a href="/">Home</a></li>
+            <li><a href="policylist">Policy List</a></li>
+            <li><a href="current">Current Policy Holders</a></li>
+        </ul>
+    </nav>
+    <form action="admin" method="POST" enctype="multipart/form-data">
+        <h1>Enter the Policy Details</h1>
+        <label for="cname">Company Name</label>
+        <input type="text" name="cname" id="cname" placeholder="Company Name">
+        <label for="vtype">Vehicle Type</label>
+        <select name="vtype" id="vtype">
+            <option value="Car">Car</option>
+            <option value="Bike">Bike</option>
+            <option value="Heavy-vehicle">Heavy-vehicle</option>
+        </select>
+        <label for="ptype">Policy Type</label>
+        <select name="ptype" id="ptype">
+            <option value="Comprehensive">Comprehensive</option>
+            <option value="Third-Party">Third-Party</option>
+        </select>
+        <label for="price">Price</label>
+        <input type="number" id="price" name="price">
+        <label for="validity">Validity</label>
+        <select name="validity" id="validity">
+            <option value="6month">6 Month</option>
+            <option value="12month">12 Month</option>
+        </select>
+        <label for="logo">Company Logo</label>
+        <input type="file" name="logo" id="logo">
+        <button type="Submit">Submit</button>
+    </form>
+    <script src="js/admin.js"></script>
+</body>
+</html>

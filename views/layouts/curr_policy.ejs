@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/curr_policy.css">
+    <title>Current Policy Holders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="title">
+            <h1>Insure</h1>
+            <h1 class="secondtitle">EASY</h1>
+            <i class="fa fa-ambulance" style="font-size: 40px; color: black;"></i>
+        </div>
+        <ul class="hide">
+            <li><a href="admin">Home</a></li>
+            <li><a href="policylist">Policy List</a></li>
+            <li><a href="current">Current Policy Holders</a></li>
+        </ul>
+        <div class="menicon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line" id="t"></div>
+        </div>
+        <ul class="h">
+            <li><a href="/">Home</a></li>
+            <li><a href="policylist">Policy List</a></li>
+            <li><a href="current">Current Policy Holders</a></li>
+        </ul>
+    </nav>
+    <main>
+        <% for(var i=0;!(i>=rows.length);i++){ %>
+            <div class="curr">
+                <h3><span>NAME:</span> <%= rows[i].name %></h3>
+                <h3><span>REG.NO:</span> <%= rows[i].vnum %></h3>
+                <h3><span>EXPIRE ON:</span> <%= rows[i].expire %></h3>
+            </div>
+        <% } %> 
+    </main>
+    <script src="js/admin.js"></script>
+</body>
+</html> 

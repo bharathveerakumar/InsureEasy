@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/policylist.css">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="title">
+            <h1>Insure</h1>
+            <h1 class="secondtitle">EASY</h1>
+            <i class="fa fa-ambulance" style="font-size: 40px; color: black;"></i>
+        </div>
+        <ul class="hide">
+            <li><a href="admin">Home</a></li>
+            <li><a href="policylist">Policy List</a></li>
+            <li><a href="current">Current Policy Holders</a></li>
+        </ul>
+        <div class="menicon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line" id="t"></div>
+        </div>
+        <ul class="h">
+            <li><a href="/">Home</a></li>
+            <li><a href="policylist">Policy List</a></li>
+            <li><a href="current">Current Policy Holders</a></li>
+        </ul>
+    </nav>
+    <main>
+        <% for(var i=0;!(i>=rows.length);i++){ %>
+            <div class="cont">
+                <img src="data:image/jpg; base64, <%= rows[i].logo %>" alt="logo">
+                <h3><%= rows[i].cname %></h3>
+                <h3><%= rows[i].ptype %></h3>
+                <h3><%= rows[i].vtype %></h3>
+                <h3><%= rows[i].validity %> month</h3>
+                <a href="remove?id=<%=rows[i].policy_id%>">Remove</a>
+            </div>
+        <% } %>
+    </main>
+    <script src="js/admin.js"></script>
+</body>
+</html>

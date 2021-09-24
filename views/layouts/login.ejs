@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Register</title>
+</head>
+<body>
+    <main>
+        <div class="maincont">
+            <div class="cont1">
+                <div>
+                    <h1>Welcome Back</h1> <br>
+                    <h3>To keep connected with us login your Personal Details</h3> <br>
+                    <h2>Enjoy Our Services</h2>
+                </div>
+            </div>
+            <form action="login" method="POST" enctype="multipart/form-data">
+                <h1>Sign in to <span>InsureEasy</span>.</h1>
+                <label for="phone">Mobile Number</label>
+                <input type="number" name="phone" id="phone" placeholder="Enter Your Number">
+                <label for="pasword">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Your Password">
+                <button type="submit">Submit</button>
+                <div class="message"><%= msg %></div>
+            </form>
+        </div>
+    </main>
+    <script src="js/register.js"></script>
+</body>
+</html>

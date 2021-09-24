@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+button{
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    z-index: 10;
+    background-color: white;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+.title{
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title:hover .secondtitle{
+    color: black;
+}
+.title:hover>h1:first-child{
+    color: blue;
+}
+.secondtitle{
+    color: blue;
+}
+.two{
+    display: none;
+}
+.rotate{
+    transform: rotateY(45deg);
+    margin-top: 0;
+}
+.rotate1{
+    transform: rotateY(-45deg);
+    margin-top: 0;
+}
+.hide{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 500px;
+    align-self: center;
+    justify-content: space-evenly;
+}
+.comp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    flex-wrap: wrap;
+}
+span{
+    color: blue;
+}
+ul{
+    display: none;
+}
+ul li{
+    position: relative;
+    list-style-type: none;
+    padding: 25px;
+    border-bottom: 5px solid white;
+    text-align: center;
+}
+li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    border-bottom: 5px solid blue;
+    transition: .7s;
+    z-index: -10;
+}
+li:hover::before{
+    width: 100%;
+}
+.menicon{
+    display: none;
+    justify-self: flex-end;
+}
+.line{
+    width: 30px;
+    height: 5px;
+    margin-top: 5px;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: .5s;
+}
+main{
+    margin-top: 4vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.polist{
+    color: black;
+    margin-bottom: 4vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-evenly;
+    box-shadow: 1px 1px 10px 1px black;
+    width: 90%;
+    background-color: white;
+}
+.polist div{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.polist img{
+    width: 50px;
+    height: 50px;
+}
+.polist button{
+    border: none;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+.polist h3, button{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+main h2{
+    margin-bottom: 30px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.confirm, .success{
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    margin-left: 25vw;
+    width: 50vw;
+    height: 200px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    box-shadow: 1px 1px 10px 1px black;
+    border-radius: 20px;
+}
+.confirm div, .success div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.confirm div a{
+    padding: 15px 20px 15px 20px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+.success img{
+    width: 50px;
+    height: 50px;
+}
+.coinfirm{
+    transition: 1s;
+}
+
+
+@media (max-width:900px){
+    .title{
+        width: 90%;
+    }
+    .menicon{
+        width: 10%;
+    }
+    .menicon{
+        display: block;
+    }
+    .comp{
+        
+        display: none;
+    }
+}

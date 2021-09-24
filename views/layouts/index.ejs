@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <nav>
+        <div class="title">
+            <h1>Insure</h1>
+            <h1 class="secondtitle">EASY</h1>
+            <i class="fa fa-ambulance" style="font-size: 40px; color: black;"></i>
+        </div>
+        <ul class="comp">
+            <li><a href="/">Home</a></li>
+            <li><a href="insurances?type=car">Car Insurance</a></li>
+            <li><a href="insurances?type=bike">Bike Insurance</a></li>
+            <li><a href="insurances?type=heavy-vehicle">Heavy Vehicle Insurance</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="<%= sess.profile %>"><%= sess.name %></a></li>
+        </ul>
+        <div class="menicon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line" id="t"></div>
+        </div>
+        <ul id="h">
+            <li><a href="insurances?type=car">Car Insurance</a></li>
+            <li><a href="insurances?type=bike">Bike Insurance</a></li>
+            <li><a href="insurances?type=heavy-vehicle">Heavy Vehicle Insurance</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="<%= sess.profile %>"><%= sess.name %></a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="add">
+            <div class="addcont">
+                <h1>Let's find you the Best Insurance</h1>
+                <h3>50+ Insurers in one place</h3>
+                <h3>Buy it with best price without the Agent</h3>
+                <h3>Quick, Easy and Hassle free</h3>
+                <a href="#3">Click Here</a>
+            </div>
+            <img src="styleman.jpg" alt="man">
+        </div>
+        <div class="vtype" id="3">
+            <h1>Select Your Vehicle Type</h1>
+            <div class="vtypecont">
+                <div class="vcont">
+                    <i class="fa fa-motorcycle" style="font-size: 80px; color: gold;"></i>
+                    <h2>Bike Insurances</h2>
+                    <a href="insurances?type=bike">Click Here</a>
+                </div>
+                <div class="vcont">
+                    <i class="fa fa-car" style="font-size: 80px; color: gold;"></i>
+                    <h2>Car Insurances</h2>
+                    <a href="insurances?type=car">Click Here</a>
+                </div>
+                <div class="vcont">
+                    <i class="fa fa-truck" style="font-size: 80px; color: gold;"></i>
+                    <h2>Heavy Vehicle Insurances</h2>
+                    <a href="insurances?type=heavy-vehicle">Click Here</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>

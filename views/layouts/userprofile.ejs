@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/userprofile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>User Profile</title>
+</head>
+<body>
+    <nav>
+        <div class="title">
+            <h1>Insure</h1>
+            <h1 class="secondtitle">EASY</h1>
+            <i class="fa fa-ambulance" style="font-size: 40px; color: black;"></i>
+        </div>
+        <ul class="comp">
+            <li><a href="/">Home</a></li>
+            <li><a href="insurances?type=car">Car Insurance</a></li>
+            <li><a href="insurances?type=bike">Bike Insurance</a></li>
+            <li><a href="insurances?type=heavy-vehicle">Heavy Vehicle Insurance</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="<%= sess.profile %>"><%= sess.name %></a></li>
+        </ul>
+        <div class="menicon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line" id="t"></div>
+        </div>
+        <ul id="h">
+            <li><a href="/">Home</a></li>
+            <li><a href="insurances?type=car">Car Insurance</a></li>
+            <li><a href="insurances?type=bike">Bike Insurance</a></li>
+            <li><a href="insurances?type=heavy-vehicle">Heavy Vehicle Insurance</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="<%= sess.profile %>"><%= sess.name %></a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Welcome Back <span><%= sess.name %>...</span></h1>
+        <div class="uvehi">
+            <h1>Your Vehicles</h1>
+            <% for(var i=0;!(i>=rows.length);i++){ %>
+                <h2><%= rows[i].vnum %></h2>
+            <% } %>
+        </div>
+        <div class="upol">
+            <h1>Your Policies</h1>
+            <% for(var i=0;!(i>=rows.length);i++){ %>
+                <div class="polcont">
+                    <h2><span>Vehicle Number</span>: <%= rows[i].vnum %></h2>
+                    <h2><span>Expire on</span>: <%= rows[i].expire %></h2>
+                </div>
+            <% } %>
+        </div>
+        <a href="logout" class="logout">LOG OUT</a>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>

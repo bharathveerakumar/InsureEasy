@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/insurances.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Insurance</title>
+</head>
+<body>
+    <nav>
+        <div class="title">
+            <h1>Insure</h1>
+            <h1 class="secondtitle">EASY</h1>
+            <i class="fa fa-ambulance" style="font-size: 40px; color: black;"></i>
+        </div>
+        <ul class="comp">
+            <li><a href="/">Home</a></li>
+            <li><a href="insurances?type=car">Car Insurance</a></li>
+            <li><a href="insurances?type=bike">Bike Insurance</a></li>
+            <li><a href="insurances?type=heavy-vehicle">Heavy Vehicle Insurance</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="<%= sess.profile %>"><%= sess.name %></a></li>
+        </ul>
+        <div class="menicon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line" id="t"></div>
+        </div>
+        <ul id="h">
+            <li><a href="/">Home</a></li>
+            <li><a href="insurances?type=car">Car Insurance</a></li>
+            <li><a href="insurances?type=bike">Bike Insurance</a></li>
+            <li><a href="insurances?type=heavy-vehicle">Heavy Vehicle Insurance</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="<%= sess.profile %>"><%= sess.name %></a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Choose Your Policy for your Vehicle Number  <span><%= sess.vnum %></span></h2>
+        <% for(var i=0;!(i>=rows.length);i++){ %>
+            <div class="polist">
+                <img src="data:image/jpg; base64, <%= rows[i].logo %>" alt="logo">
+                <div><h3><%= rows[i].cname %></h3>
+                <h3><%= rows[i].vtype %></h3>
+                <h3><%= rows[i].ptype %></h3>
+                <h3>Validity: <%= rows[i].validity %> month</h3>
+                <h3>Price: <%= rows[i].price %></h3>
+                <button value="<%= rows[i].policy_id %>" class="b">Buy Now</button></div>
+            </div>
+        <% } %>
+    </main>
+    <div class="confirm">
+        <h2>Do you want to Buy this Policy</h2>
+        <div>
+            <a class="yes">YES</a>
+            <a class="no">NO</a>
+        </div>
+    </div>
+    <div class="success">
+        <div>
+            <img src="download.png" alt="tick">
+            <h2>You Have Successfully Renewed the policy for your Vehicle.</h2>
+        </div>
+    </div>
+    <script src="js/insurances.js"></script>
+</body>
+</html>
